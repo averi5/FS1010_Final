@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Contact Me</title>
+        <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet'>
+        <link rel="stylesheet" href="CSS/styles.css">
+    </head>
+    <body>
+        <header>
+            <img src="img/AV Logo_rev.png" class="logo">
+            <h1 class="name">Andrew Veri</h1>
+            <h4 class="tagline">Evolve into Efficiency</h4>
+            <nav class="nav">
+                <ul class="main-menu">
+                    <li class="menu-item">
+                        <a class="buttons" id="home" href="Home.html">Home</a> 
+                    </li> 
+                    <li class="menu-item">
+                        <a class="buttons"id="portfolio" href="Portfolio.html">Portfolio</a> 
+                    </li>
+                    <li class="menu-item">
+                        <a class="buttons" id="resume" href="Resume.html">Resume</a> 
+                    </li>
+                    <li class="menu-item">
+                        <a class="buttons" id="contact"  href="ContactMe.html">Contact</a> 
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section class="main">
+            <h2>What's on your mind?</h2><br>
+            <form class="contact-form" name="contactForm" onsubmit="return emailMe()"  >
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name"  autocomplete="off" >
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" autocomplete="off" placeholder="name@email.com" >
+                <br>
+                <label for="phone">Phone:</label>
+                <input type="tel" name="phone" id="phone" autocomplete="off" >
+                <br>
+                <label id="msg" for="message">Message:</label><br>
+                <textarea rows="5" cols="30" name="message" id="message" autocomplete="off" ></textarea>
+                <br>
+                <input class="form-btn" type="submit" value="Send">
+            </form>
+        </section>
+        <script type="text/javascript">
+            function emailMe(){
+                let nameInput = document.forms["contactForm"]["name"].value;
+                let emailInput = document.forms["contactForm"]["email"].value;
+                let phoneInput = document.forms["contactForm"]["phone"].value;
+                let msgInput = document.forms["contactForm"]["message"].value;
+                if(nameInput=="") {
+                    alert("Please input a name");
+                } else if(emailInput=="" || !emailInput.includes("@")) {
+                    alert("Please input a valid email");
+                } else if (phoneInput=="") {
+                    alert("Please input a contact number");
+                } else if (msgInput=="") {
+                    alert("Please input a message");
+                } else {
+                alert(`Thank You ${nameInput}! \n Email: ${emailInput} \n Phone: ${phoneInput} \n Message: ${msgInput}`)
+                }
+            }
+        </script>
+        <footer>       
+            <p>&copy; 2020 Andrew Veri &emsp;&emsp; <a href="ContactMe.html">Email Me</a> &emsp;&emsp; Have Fun and Enjoy</a> </p>
+       </footer>
+    </body>
+</html>
