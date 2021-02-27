@@ -16,88 +16,24 @@ body{
     align-items: center;
 }
 header{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     top:0;
     width:100%;
     padding:0px 80px;
     background-color: rgb(0, 142, 60);
     box-shadow: 0px 1px 4px 1px rgb(77, 77, 77, 0.75);
+}
+.nav{
+    margin-left: 3rem;
+    margin-bottom: 1rem;
 
-}
-main{
-    display: flex;
-    justify-content: center;
-    width: 80%;
-    padding: 30px;
-}
-.name, .tagline{
-    float: left;
-    margin-top: 50px;
-    padding-left: 20px;
-    line-height: 40px;
-    color: white;
-}
-.name{
-    font-size: 42px;
-}
-.home{
-    display: flex;
-    justify-content: center;
-}
-.aboutMe{
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-}
-.tagline{
-    margin:60px 0px 0px -10px;
-}
-.logo{
-    float:left;
-    position: relative;
-    margin: 10px;
-}
-.selfie{
-    top:5px;
-    margin-right: 2rem;
-}
-#title{
-    text-align: left;
-    top:20px;
-    width: 50%;
-    
-}
-.portMain{
-    display: flex;
-    flex-direction:column;
-    text-align: center;
-}
-.designPort, .artPort{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.port{
-    position: relative;
-    display: inline-block;
-    margin: 10px;
-    border: 2px solid rgb(0, 142, 60);
-    border-radius: 2.5%;
-    overflow: hidden;
-    transition: .5s ease;
-}
-.port:hover{
-    box-shadow: 0px 3px 4px 3px rgb(77, 77, 77, 0.75);
-    transform:translateY(-3px);
 }
 .main-menu{
+    display: flex;
     list-style-type: none;
-    float: right;
     text-align: center;
-
-}
-.menu-item{
-    display: inline-block;
-    position: relative;
 }
 .buttons {
     display: inline-block;
@@ -117,17 +53,83 @@ main{
     border-radius: 25%;
     vertical-align: middle;
     overflow: hidden;
-    transition: .5s ease;
+    transition: .3s ease;
 
 }
 .buttons:hover{
     box-shadow: 0px 2px 4px 2px rgb(50, 50, 50, 0.5);
     transform:translateY(-2px);
 }
-.form-btn:hover{
-    box-shadow: 0px 1.5px 3px 1.5px rgb(50, 50, 50, 0.5);
-    transform:translateY(-1.5px);
+main{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    padding: 30px;
 }
+.name, .tagline{
+    float: left;
+    margin-top: 50px;
+    padding-left: 20px;
+    line-height: 40px;
+    color: white;
+}
+.name{
+    font-size: 42px;
+}
+.tagline{
+    margin:60px 0px 0px -10px;
+}
+.logo{
+    margin: 1rem 0 1rem 0;
+    height: 7rem;
+}
+.home{
+    display: flex;
+    justify-content: center;
+}
+.aboutMe{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.selfie{
+    top: 1rem;
+    margin-right: 2rem;
+    height: 100%;
+}
+#title{
+    text-align: left;
+    top:20px;
+    width: 50%;
+    
+}
+.portMain{
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+
+}
+.designPort, .artPort{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.port{
+    position: relative;
+    display: inline-block;
+    background-color: white;
+    margin: 10px;
+    border: 2px solid rgb(0, 142, 60);
+    border-radius: 2.5%;
+    overflow: hidden;
+    transition: .3s ease;
+}
+.port:hover{
+    box-shadow: 0px 3px 4px 3px rgb(77, 77, 77, 0.75);
+    transform:translateY(-3px);
+}
+
 .resumeMain{
     display: flex;
     justify-content: center;
@@ -160,7 +162,11 @@ main{
     border: 2px solid rgb(0, 142, 60);
     border-radius: 20%;
     font-weight: bolder;
-    transition: .5s ease;
+    transition: .3s ease;
+}
+.form-btn:hover{
+    box-shadow: 0px 1.5px 3px 1.5px rgb(50, 50, 50, 0.5);
+    transform:translateY(-1.5px);
 }
 input, textarea{
     text-align: left;    
@@ -172,7 +178,7 @@ input, textarea{
     text-decoration: none;
     font-weight: bolder;
     font-size: 20px;
-    margin: 0rem 1rem;
+    margin: 1rem 1rem;
     height: 400px;
     width: 400px;
     border: 1.5px solid  rgb(0, 142, 60);
@@ -181,7 +187,7 @@ input, textarea{
     background-color: white;
     border-radius: 20%;
     overflow: hidden;
-    transition: .5s ease;
+    transition: .3s ease;
 }
 .portfolio h2{
     position: absolute;
