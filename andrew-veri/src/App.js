@@ -9,6 +9,7 @@ import Footer from './components/footer'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import DesignPort from './components/designPort';
 import ArtPort from './components/artPort'
+import imageDetail from './components/imageDetail'
 
 function App() {
 
@@ -16,17 +17,20 @@ function App() {
     <div className="App">
     <Router>
       <Nav />
-      <Footer />
 
       <Switch>
         <Route path='/' exact component={Home}/>
         <Route path='/portfolio'exact component={Portfolio}/>
         <Route path='/resume' component={Resume}/>
         <Route path='/contactMe' component={ContactMe}/>
-        <Route path='/portfolio/designPort' component={DesignPort}/>
-        <Route path='/portfolio/artPort' component={ArtPort}/>
+        <Route path='/portfolio/designPort' exact component={DesignPort}/>
+        <Route path='/portfolio/designPort/:id' component={imageDetail}/>
+        <Route path='/portfolio/artPort' exact component={ArtPort}/>
+        <Route path='/portfolio/artPort/:id' component={imageDetail}/>
 
       </Switch>
+
+      <Footer />
     </Router>
     </div>
     

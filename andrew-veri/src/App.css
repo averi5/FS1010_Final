@@ -29,7 +29,9 @@ header{
 .nav{
   margin-left: 3rem;
   margin-bottom: 1rem;
-
+}
+#root{
+  width: 100%;
 }
 .main-menu{
   display: flex;
@@ -117,8 +119,8 @@ main{
   justify-content: center;
 }
 .port{
-  position: relative;
-  display: inline-block;
+  display: flex;
+  align-content: center;
   background-color: white;
   margin: 10px;
   border: 2px solid rgb(0, 142, 60);
@@ -136,6 +138,7 @@ main{
   justify-content: center;
   flex-direction: column;    
   align-content: left;
+  padding: 1rem 15% 0 15%;
 }
 .resume{
   margin: .5rem;
@@ -176,6 +179,8 @@ input, textarea{
 }
 .portfolio{
   position: relative;
+  display: flex;
+  align-items: center;
   text-decoration: none;
   font-weight: bolder;
   font-size: 20px;
@@ -206,8 +211,11 @@ input, textarea{
   box-shadow: 0px 4px 5px 4px rgb(77, 77, 77, 0.75);
   transform:translateY(-4px);
 }
+.singleImage{
+  width: 100%;
+}
 footer{
   position: absolute;
   font-size: 12px;
-  bottom: 0px;
+  bottom: -30px;
 }

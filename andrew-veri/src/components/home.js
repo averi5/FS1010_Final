@@ -1,11 +1,10 @@
 import React from 'react';
-import portrait from '../img/portrait_av.jpg'
 
 class Home extends React.Component{
     render(){
         return (
             <main className="home">
-                <img src={portrait} className="selfie" alt="Andrew Veri"/>
+                <img src='/img/portrait_av.jpg' className="selfie" alt="Andrew Veri"/>
                 <section className="aboutMe">
                     <h2 id="title">About Me</h2>
                     <br></br>
