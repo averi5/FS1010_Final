@@ -5,7 +5,7 @@ class Resume extends React.Component {
         return (
             <main class="resumeMain">
             <h2 class="resume" >Resume</h2>
-            <p class="resume" >Designer with 15 years of experience in print and digital media. Highly skilled at efficiently producing functional, <br/> creative design for retail advertising and catalogues as demonstrated when spearheading a 30-day newspaper campaign. <br/> Loyal, passionate and driven to succeed in print media, motion graphics and animation sectors.</p>
+            <p class="resume" >Designer with 15 years of experience in print and digital media. Highly skilled at efficiently producing functional, creative design for retail advertising and catalogues as demonstrated when spearheading a 30-day newspaper campaign. Loyal, passionate and driven to succeed in print media, motion graphics and animation sectors.</p>
             <h4 class="resume">Graphic Layout Artist - Transcontinental Premedia</h4>
             <ul class="resume">
                 <li>Assembled retail pages for print & digital media</li>
