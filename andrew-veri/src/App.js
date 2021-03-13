@@ -14,11 +14,6 @@ import Login from './components/login';
 import Admin from './components/admin';
 
 function App() {
-  const [token, setToken] = useState();
-
-  // if (!token){
-  //     return <Login setToken={setToken}/>
-  // }
 
   return (
     <div className="App">
@@ -31,7 +26,7 @@ function App() {
         <Route path='/resume' component={Resume}/>
         <Route path='/contactMe' component={ContactMe}/>
         <Route path='/login' exact component={Login}/>
-        <Route path='/login/admin' component={Admin}/>
+        <Route path='/admin' exact component={Admin}/>
         <Route path='/portfolio/designPort' exact component={DesignPort}/>
         <Route path='/portfolio/designPort/:id' component={imageDetail}/>
         <Route path='/portfolio/artPort' exact component={ArtPort}/>
