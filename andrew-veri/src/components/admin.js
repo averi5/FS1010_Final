@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { useHistory } from "react-router-dom";
+import { Link } from 'react-router-dom'
 
 function Admin() {
-    let history = useHistory();
     const token = sessionStorage.getItem('token')
     const [listing, setListing] = useState([])
+    const [loggedIn, setLoggedIn] = useState(false)
     
     useEffect( () => {
         const getData = async () => {
@@ -16,16 +16,20 @@ function Admin() {
             })
             const data = await response.json()
             setListing(data)
+            setLoggedIn(response.status)
         }
         getData()
     }, [token])
     return (
         <main>
-             {listing.length === 0 &&
+            {loggedIn === 403 &&
+                <h1>403 Forbidden</h1>
+            }
+            {listing.length === 0 &&
                 <h4>No listings found</h4>
             }
             {listing.length > 0 &&
-                listing.map(entry => <div><h4>{entry.id}</h4><h3>{entry.name}</h3><h4>{entry.phoneNumber}</h4><h4>{entry.email}</h4><p>{entry.content}</p></div>)
+                listing.map((entry, key) => <div key={key}><p className='entry'>{entry.id}</p><h2 className='entry'>{entry.name}</h2><h4 className='entry'>{entry.phoneNumber}</h4><h4 className='entry'>{entry.email}</h4><p className='entry'>{entry.content}</p></div>)
             }
         </main>
     )

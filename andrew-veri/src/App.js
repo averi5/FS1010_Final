@@ -14,7 +14,7 @@ import Login from './components/login';
 import Admin from './components/admin';
 
 function App() {
-
+  
   return (
     <div className="App">
     <Router>
@@ -31,7 +31,6 @@ function App() {
         <Route path='/portfolio/designPort/:id' component={imageDetail}/>
         <Route path='/portfolio/artPort' exact component={ArtPort}/>
         <Route path='/portfolio/artPort/:id' component={imageDetail}/>
-
       </Switch>
 
       <Footer />

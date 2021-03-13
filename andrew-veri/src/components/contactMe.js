@@ -17,7 +17,7 @@ const ContactMe = () => {
         })
         const payload = await response.json()
         if (response.status >= 400) {
-            alert(`Oops! Error: ${payload.message} for fields: ${payload.invalid.join(",")}`)
+            alert(`Error: ${payload.message} for fields: ${payload.invalid.join(",")}`)
         } else {
             alert(`Thanks for your message!\nI'll get back to you as soon as I can.`)
         }
